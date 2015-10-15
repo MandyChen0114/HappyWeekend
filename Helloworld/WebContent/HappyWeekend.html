@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<!-- SITE TITLE -->
+<title>HappyWeekend</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Frijole'
+	rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Cabin+Sketch'
+	rel='stylesheet' type='text/css'>
+<style>
+h1 {
+	font-family: 'Frijole', hand;
+	font-weight: 200;
+	font-size: 50px;
+	color: #fff;
+	margin-top: 90px;
+	text-align: center;
+}
+
+h2 {
+	font-family: 'Cabin Sketch', cursive;
+	font-size: 40px;
+	padding-left: 310px;
+	color: #fff;
+}
+
+h3 {
+	font-family: 'Cabin Sketch', cursive;
+	font-size: 40px;
+	color: #fff;
+	width: 600px;
+}
+
+div1,div2,div3 {
+	margin-left: 310px;
+}
+
+span {
+	width: 100px;
+}
+div3 button{
+padding-left:300px;
+}
+</style>
+</head>
+<body
+	background="http://40.media.tumblr.com/dc598f487a6c370c6ef471e67f0c3499/tumblr_mvl10pTHth1slg7s2o1_1280.jpg">
+	<script type="text/javascript">
+		function submitform() {
+			document.forms["city"].submit();
+		}
+		function submitmovieform() {
+			document.forms["movie"].submit();
+		}
+	</script>
+	<h1>Happy Weekends</h1>
+	<div class="row">
+		<h2>City:</h2>
+		<form id="city" action="http://localhost:8080/Helloworld/Weather">
+		<div1 class="col-lg-6">
+		<div class="input-group">
+			<input type="text" class="form-control" name="q"
+				placeholder="Enter city"> <span class="input-group-btn">
+				<button class="btn btn-info" type="button" onclick="submitform()">Weather</button>
+			</span>
+		</div>
+		</div1> </form>
+	</div>
+	<h2>Movie's name:</h2>
+	<div class="row">
+		<form id="movie" action="http://localhost:8080/Helloworld/Movie">
+			<div2 class="col-lg-6">
+			<div class="input-group">
+				<input type="text" class="form-control" name="t"
+					placeholder="Enter movie's name">
+			</div>
+			</div2>
+			<div3 class="col-lg-6">
+			<h3>Movie's Year:</h3>
+			<div class="input-group">
+			<input type="text" class="form-control" name="y"
+				placeholder="Enter movie's year"> <input type="hidden"
+				class="form-control" name="plot" value="full"> <input
+				type="hidden" class="form-control" name="r" value="json">
+					</div>
+					 
+				<button class="btn btn-info" type="button"
+					onclick="submitmovieform()">Movie</button>
+		 </div3>
+		</form>
+	</div>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</body>
+</html>
